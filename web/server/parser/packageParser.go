@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/smartystreets/goconvey/web/server/contract"
+	"github.com/privafy/goconvey/web/server/contract"
 )
 
 var (

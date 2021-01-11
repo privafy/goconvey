@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/smartystreets/goconvey/convey/reporting"
-	"github.com/smartystreets/goconvey/web/server/contract"
+	"github.com/privafy/goconvey/convey/reporting"
+	"github.com/privafy/goconvey/web/server/contract"
 )
 
 func init() {
@@ -163,7 +163,7 @@ const failureTemplate = "Comparison failed:\n  Expected: %v\n    Actual: %v\n"
 const input_NoGoFiles = `can't load package: package github.com/smartystreets/goconvey: no buildable Go source files in /Users/matt/Work/Dev/goconvey/src/github.com/smartystreets/goconvey`
 
 var expected_NoGoFiles = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey",
+	PackageName: "github.com/privafy/goconvey",
 	Outcome:     contract.NoGoFiles,
 	BuildOutput: input_NoGoFiles,
 }
@@ -181,7 +181,7 @@ PASS
 ok  	github.com/smartystreets/goconvey/scripts	0.011s`
 
 var expected_NoTestFunctions = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/scripts",
+	PackageName: "github.com/privafy/goconvey/scripts",
 	Outcome:     contract.NoTestFunctions,
 	BuildOutput: input_NoTestFunctions,
 }
@@ -193,7 +193,7 @@ bowling_game_test.go:10:1: invalid package name _
 `
 
 var expected_BuildFailed_InvalidPackageDeclaration = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/examples",
+	PackageName: "github.com/privafy/goconvey/examples",
 	Outcome:     contract.BuildFailure,
 	BuildOutput: strings.TrimSpace(input_BuildFailed_InvalidPackageDeclaration),
 }
@@ -206,7 +206,7 @@ FAIL	github.com/smartystreets/goconvey/examples [setup failed]
 `
 
 var expected_BuildFailed_CantFindPackage = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/examples",
+	PackageName: "github.com/privafy/goconvey/examples",
 	Outcome:     contract.BuildFailure,
 	BuildOutput: strings.TrimSpace(input_BuildFailed_CantFindPackage),
 }
@@ -216,7 +216,7 @@ mutustus.go:4:2: found packages e (e.go) and err (prepend.go) in /Users/mike/src
 `
 
 var expected_BuildFailed_ConflictingImport = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/examples",
+	PackageName: "github.com/privafy/goconvey/examples",
 	Outcome:     contract.BuildFailure,
 	BuildOutput: strings.TrimSpace(input_BuildFailed_ConfictingImport),
 }
@@ -238,19 +238,19 @@ FAIL	github.com/smartystreets/goconvey/examples [build failed]
 `
 
 var expected_BuildFailed_OtherErrors = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/examples",
+	PackageName: "github.com/privafy/goconvey/examples",
 	Outcome:     contract.BuildFailure,
 	BuildOutput: strings.TrimSpace(input_BuildFailed_OtherErrors),
 }
 
 const input_BuildFailed_ImportCycle = `
 # github.com/smartystreets/goconvey/t
-./t_test.go:23: import "github.com/smartystreets/goconvey/t" while compiling that package (import cycle)
+./t_test.go:23: import "github.com/privafy/goconvey/t" while compiling that package (import cycle)
 FAIL	github.com/smartystreets/goconvey/t [build failed]
 `
 
 var expected_BuildFailed_ImportCycle = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/t",
+	PackageName: "github.com/privafy/goconvey/t",
 	Outcome:     contract.BuildFailure,
 	BuildOutput: strings.TrimSpace(input_BuildFailed_ImportCycle),
 }
@@ -271,7 +271,7 @@ ok  	github.com/smartystreets/goconvey/webserver/examples	0.018s
 `
 
 var expectedOldSchool_Passes = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.018,
 	Coverage:    100,
 	Outcome:     contract.Passed,
@@ -325,7 +325,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.017s
 `
 
 var expectedOldSchool_Fails = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Outcome:     contract.Failed,
 	Elapsed:     0.017,
 	TestResults: []contract.TestResult{
@@ -421,7 +421,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.414s
 `
 
 var expectedOldSchoolWithDiff2_Fails = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Outcome:     contract.Failed,
 	Elapsed:     0.414,
 	Coverage:    51.7,
@@ -496,7 +496,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.017s
 `
 
 var expectedOldSchoolWithDiff_Fails = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Outcome:     contract.Failed,
 	Elapsed:     0.017,
 	TestResults: []contract.TestResult{
@@ -576,7 +576,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.014s
 `
 
 var expectedOldSchool_Panics = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.014,
 	Outcome:     contract.Panicked,
 	TestResults: []contract.TestResult{
@@ -667,7 +667,7 @@ ok  	github.com/smartystreets/goconvey/webserver/examples	0.019s
 `
 
 var expectedGoConvey = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.019,
 	Outcome:     contract.Passed,
 	Coverage:    75.5,
@@ -751,7 +751,7 @@ ok  	github.com/smartystreets/goconvey/web/server/testing	0.024s
 `
 
 var expectedGoConvey_WithRandomOutput = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/web/server/testing",
+	PackageName: "github.com/privafy/goconvey/web/server/testing",
 	Elapsed:     0.024,
 	Outcome:     contract.Passed,
 	Coverage:    45.0,
@@ -814,7 +814,7 @@ ok  	github.com/smartystreets/goconvey/webserver/examples	0.018s
 `
 
 var expectedOldSchool_PassesButCoverageIsBogus = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.018,
 	Coverage:    -1,
 	Outcome:     contract.Passed,
@@ -863,7 +863,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.018s
 `
 
 var expectedNestedTests = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.018,
 	Outcome:     contract.Failed,
 	TestResults: []contract.TestResult{
@@ -940,7 +940,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.18s
 `
 
 var expectedExampleFunctions = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.18,
 	Outcome:     contract.Failed,
 	TestResults: []contract.TestResult{
@@ -973,7 +973,7 @@ ok  	github.com/smartystreets/goconvey/webserver/examples	0.008s
 `
 
 var expectedGolang15 = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.008,
 	Outcome:     contract.Passed,
 	TestResults: []contract.TestResult{
@@ -1008,7 +1008,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.007s
 `
 
 var expectedGolang17Subtests = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.007,
 	Outcome:     contract.Failed,
 	TestResults: []contract.TestResult{
@@ -1076,7 +1076,7 @@ ok  	github.com/smartystreets/goconvey/webserver/examples	3.433s
 `
 
 var expectedGinkgo_Passes = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     3.433,
 	Outcome:     contract.Passed,
 }
@@ -1100,7 +1100,7 @@ FAIL	github.com/smartystreets/goconvey/webserver/examples	0.810s
 `
 
 var expectedGinkgo_Fails = contract.PackageResult{
-	PackageName: "github.com/smartystreets/goconvey/webserver/examples",
+	PackageName: "github.com/privafy/goconvey/webserver/examples",
 	Elapsed:     0.810,
 	Outcome:     contract.Failed,
 }

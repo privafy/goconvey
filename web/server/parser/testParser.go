@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/smartystreets/goconvey/convey/reporting"
-	"github.com/smartystreets/goconvey/web/server/contract"
+	"github.com/privafy/goconvey/convey/reporting"
+	"github.com/privafy/goconvey/web/server/contract"
 )
 
 type testParser struct {

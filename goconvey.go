@@ -19,13 +19,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/smartystreets/goconvey/web/server/api"
-	"github.com/smartystreets/goconvey/web/server/contract"
-	"github.com/smartystreets/goconvey/web/server/executor"
-	"github.com/smartystreets/goconvey/web/server/messaging"
-	"github.com/smartystreets/goconvey/web/server/parser"
-	"github.com/smartystreets/goconvey/web/server/system"
-	"github.com/smartystreets/goconvey/web/server/watch"
+	"github.com/privafy/goconvey/web/server/api"
+	"github.com/privafy/goconvey/web/server/contract"
+	"github.com/privafy/goconvey/web/server/executor"
+	"github.com/privafy/goconvey/web/server/messaging"
+	"github.com/privafy/goconvey/web/server/parser"
+	"github.com/privafy/goconvey/web/server/system"
+	"github.com/privafy/goconvey/web/server/watch"
 )
 
 func init() {

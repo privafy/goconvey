@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/smartystreets/goconvey/convey"
-	"github.com/smartystreets/goconvey/web/server/contract"
-	"github.com/smartystreets/goconvey/web/server/messaging"
+	. "github.com/privafy/goconvey/convey"
+	"github.com/privafy/goconvey/web/server/contract"
+	"github.com/privafy/goconvey/web/server/messaging"
 )
 
 const initialRoot = "/root/gopath/src/github.com/smartystreets/project"

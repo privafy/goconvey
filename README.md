@@ -1,8 +1,8 @@
 GoConvey is awesome Go testing
 ==============================
 
-[![Build Status](https://travis-ci.org/smartystreets/goconvey.png)](https://travis-ci.org/smartystreets/goconvey)
-[![GoDoc](https://godoc.org/github.com/smartystreets/goconvey?status.svg)](http://godoc.org/github.com/smartystreets/goconvey)
+[![Build Status](https://travis-ci.org/privafy/goconvey.png)](https://travis-ci.org/privafy/goconvey)
+[![GoDoc](https://godoc.org/github.com/privafy/goconvey?status.svg)](http://godoc.org/github.com/privafy/goconvey)
 
 
 Welcome to GoConvey, a yummy Go testing tool for gophers. Works with `go test`. Use it in the terminal or browser according to your viewing pleasure. **[View full feature tour.](http://goconvey.co)**
@@ -35,9 +35,9 @@ You can ask questions about how to use GoConvey on [StackOverflow](http://stacko
 Installation
 ------------
 
-	$ go get github.com/smartystreets/goconvey
+	$ go get github.com/privafy/goconvey
 
-[Quick start](https://github.com/smartystreets/goconvey/wiki#get-going-in-25-seconds)
+[Quick start](https://github.com/privafy/goconvey/wiki#get-going-in-25-seconds)
 -----------
 
 Make a test, for example:
@@ -47,7 +47,7 @@ package package_name
 
 import (
     "testing"
-    . "github.com/smartystreets/goconvey/convey"
+    . "github.com/privafy/goconvey/convey"
 )
 
 func TestSpec(t *testing.T) {
@@ -68,7 +68,7 @@ func TestSpec(t *testing.T) {
 ```
 
 
-#### [In the browser](https://github.com/smartystreets/goconvey/wiki/Web-UI)
+#### [In the browser](https://github.com/privafy/goconvey/wiki/Web-UI)
 
 Start up the GoConvey web server at your project's path:
 
@@ -89,11 +89,11 @@ As long as GoConvey is running, test results will automatically update in your b
 The design is responsive, so you can squish the browser real tight if you need to put it beside your code.
 
 
-The [web UI](https://github.com/smartystreets/goconvey/wiki/Web-UI) supports traditional Go tests, so use it even if you're not using GoConvey tests.
+The [web UI](https://github.com/privafy/goconvey/wiki/Web-UI) supports traditional Go tests, so use it even if you're not using GoConvey tests.
 
 
 
-#### [In the terminal](https://github.com/smartystreets/goconvey/wiki/Execution)
+#### [In the terminal](https://github.com/privafy/goconvey/wiki/Execution)
 
 Just do what you do best:
 
@@ -104,13 +104,13 @@ Or if you want the output to include the story:
     $ go test -v
 
 
-[Documentation](https://github.com/smartystreets/goconvey/wiki)
+[Documentation](https://github.com/privafy/goconvey/wiki)
 -----------
 
 Check out the
 
-- [GoConvey wiki](https://github.com/smartystreets/goconvey/wiki),
-- [![GoDoc](https://godoc.org/github.com/smartystreets/goconvey?status.png)](http://godoc.org/github.com/smartystreets/goconvey)
+- [GoConvey wiki](https://github.com/privafy/goconvey/wiki),
+- [![GoDoc](https://godoc.org/github.com/privafy/goconvey?status.png)](http://godoc.org/github.com/privafy/goconvey)
 - and the *_test.go files scattered throughout this project.
 
 [Screenshots](http://goconvey.co)
@@ -121,4 +121,4 @@ For web UI and terminal screenshots, check out [the full feature tour](http://go
 Contributors
 ----------------------
 
-GoConvey is brought to you by [SmartyStreets](https://github.com/smartystreets) and [several contributors](https://github.com/smartystreets/goconvey/graphs/contributors) (Thanks!).
+GoConvey is brought to you, originally by [SmartyStreets](https://github.com/privafy), [Privafy](https://github.com/privafy) and[several contributors](https://github.com/privafy/goconvey/graphs/contributors) (Thanks!).
