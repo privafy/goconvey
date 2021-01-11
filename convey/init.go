@@ -4,7 +4,7 @@ import (
 	"flag"
 	"os"
 
-	""github.com/privafy/goconvey/util/gls"
+	"github.com/privafy/goconvey/util/gls"
 	"github.com/privafy/goconvey/util/assertions"
 	"github.com/privafy/goconvey/convey/reporting"
 )

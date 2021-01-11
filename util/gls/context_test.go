@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	""github.com/privafy/goconvey/util/gls"
+	"github.com/privafy/goconvey/util/gls"
 )
 
 func TestContexts(t *testing.T) {

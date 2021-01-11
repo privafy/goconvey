@@ -3,7 +3,7 @@ package convey
 import (
 	"fmt"
 
-	""github.com/privafy/goconvey/util/gls"
+	"github.com/privafy/goconvey/util/gls"
 	"github.com/privafy/goconvey/convey/reporting"
 )
 
