@@ -23,6 +23,7 @@ func init() {
 			mark_lookup[v] = f
 		}
 	}
+	
 	setEntries(github_com_jtolds_gls_markS, -0x1)
 	setEntries(github_com_jtolds_gls_mark0, 0x0)
 	setEntries(github_com_jtolds_gls_mark1, 0x1)
@@ -40,6 +41,7 @@ func init() {
 	setEntries(github_com_jtolds_gls_markD, 0xd)
 	setEntries(github_com_jtolds_gls_markE, 0xe)
 	setEntries(github_com_jtolds_gls_markF, 0xf)
+	
 }
 
 func addStackTag(tag uint, context_call func()) {
@@ -102,6 +104,7 @@ func github_com_jtolds_gls_markE(tag uint, cb func()) { _m(tag, cb) }
 
 //go:noinline
 func github_com_jtolds_gls_markF(tag uint, cb func()) { _m(tag, cb) }
+
 
 func _m(tag_remainder uint, cb func()) {
 	if tag_remainder == 0 {
